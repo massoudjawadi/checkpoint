@@ -1,0 +1,19 @@
+ALGORITHM calcul;
+VAR
+    nb-vowel,nb-word,nb-char:INTEGER;
+    c:char;
+
+
+BEGIN
+    WHILE (c<>".") DO
+        nb-char=nb-char+1;
+        IF c in  ["a","e","i","y","A","E","I","Y"] THEN
+            nb-vowel=nb-vol+1;
+        END_IF
+        if (c=" ") THEN
+        nb-word=nb-word+1;
+        END_IF 
+
+    END_WHILE
+    write( "the number of the char is " nb-char, "the number of the word is " nb-word, "the number of the vowel is " nb-vowel)
+END
