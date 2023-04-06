@@ -1,0 +1,24 @@
+PROCEDURE inverse(var x,y:INTEGER)
+VAR
+    z:INTEGER
+BEGIN
+    z:=x;
+    x:=y;
+    y:=z;
+END
+
+PROCEDURE sort(var tab: ARRAY_OF integer)
+VAR
+    i,x,j,n:INTEGER;
+BEGIN
+    n:= tab.length;
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        FOR j FROM 0 TO (n-i-1) STEP 1  DO
+            IF (tab[j]>tab[j+1]) THEN
+            inverse(tab[j],tab[j+1])
+            END_IF
+        END_FOR
+    END_FOR
+
+
+END
